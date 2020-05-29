@@ -1,0 +1,35 @@
+#include <stdio.h>
+struct item
+{
+    int number;
+    char name[20];
+    int rate;
+    int quantity;
+};
+void main()
+{
+    int i, n;
+    struct item ar[5];
+    for(i=0;i<5;i++)
+    {
+        printf("Enter item %d number: ",i+1);
+        scanf("%d",&ar[i].number);
+        printf("Enter item %d name: ",i+1);
+        scanf("%s",ar[i].name);
+        printf("Enter rate: ");
+        scanf("%d",&ar[i].rate);
+        printf("Enter quantity: ");
+        scanf("%d",&ar[i].quantity);
+        
+    }
+    for(i=0;i<5;i++)
+    {
+        printf("Item %d name: %s",i+1,ar[i].name);
+        printf("Total price: %d",ar[i].rate*ar[i].quantity);
+    }
+    for(i=0;i<5;i++)
+    {
+        n+=(ar[i].rate*ar[i].quantity);
+    }
+    printf("Total in the storage: %d",n);
+}
